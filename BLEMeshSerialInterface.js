@@ -80,6 +80,7 @@ const commandOpCodeToString = reverseLookup(commandOpCodes);
 const statusCodeToString = reverseLookup(statusCodes);
 const responseOpCodeToString = reverseLookup(responseOpCodes);
 
+const arrToByteStr = arr => '[' + arr.join(', ') + ']';
 
 class BLEMeshSerialInterface extends EventEmitter {
   constructor(serialPort, callback, baudRate, rtscts) {
